@@ -19,7 +19,7 @@ Future<AudioPlayer> getPlayer(
       for (int i = firstAyah.numberInSurah;
           i < firstAyah.numberInSurah + ayahsCount;
           i++)
-        AudioSource.uri(
+        LockCachingAudioSource(
           Uri.parse(
             formatToAVaildUrl(
                 quranRecuter: settings.quranRecuter,
